@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Y cual es el precio?</title>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="bootstrap.min.css" />
+ </head>
+ <body>
+  <!--Navegación-->
+  <nav class="navbar navbar-light bg-light" data-aos="zoom-out-right">
+   <a href="/" class="navbar-brand"> App de Productos </a>
+  </nav>
+
+  <div class="container">
+   <!--aplicación-->
+   <div id="app" class="row pt-5">
+    <div class="col-md-4" data-aos="flip-left">
+     <div class="card" data-aos="zoom-in">
+      <div class="card-header">
+       <h4>Ingresa el Nombre del Producto</h4>
+      </div>
+      <form id="product-form" class="card-body">
+       <div class="form-group">
+        <input
+         type="text"
+         id="name"
+         placeholder="Nombre del Producto"
+         class="form-control"
+        />
+       </div>
+       <div class="form-group">
+        <input
+         type="number"
+         id="price"
+         placeholder="Precio del producto"
+         class="form-control"
+        />
+       </div>
+       <div class="form-group">
+        <input
+         type="number"
+         id="year"
+         placeholder="Año"
+         class="form-control"
+         max="2032"
+        />
+       </div>
+       <div>
+        <input
+         type="submit"
+         value="Guardar"
+         class="btn btn-primary btn-block"
+        />
+       </div>
+      </form>
+     </div>
+    </div>
+    <div class="col-md-8">
+     <div id="product-list"></div>
+    </div>
+   </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+   AOS.init()
+  </script>
+  <script src="anime.js"></script>
+ </body>
+</html>
